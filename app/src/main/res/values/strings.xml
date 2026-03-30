@@ -1,3 +1,13 @@
 <resources>
-    <string name="app_name">AppComida</string>
+    <string name="app_name">picana_apk</string>
+    <string name="action_settings">Settings</string>
+    <string name="first_fragment_label">First Fragment</string>
+    <string name="second_fragment_label">Second Fragment</string>
+    <string name="next">Next</string>
+    <string name="previous">Previous</string>
+    <string name="lorem_ipsum"></string>
+
+    <string name="facebook_app_id">1275385753921668</string>
+    <string name="fb_login_protocol_scheme">fb1275385753921668</string>
+    <string name="facebook_client_token">e330c1f7e26a882165d40dfea70f3cc6</string>
 </resources>

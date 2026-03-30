@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/layoutRaizInicioSesion"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_fondo">
+
+    <ImageView
+        android:id="@+id/imgIlustracionLogin"
+        android:layout_width="220dp"
+        android:layout_height="220dp"
+        android:layout_marginTop="172dp"
+        android:contentDescription="@string/ilustracion_login"
+        android:scaleType="fitCenter"
+        android:src="@drawable/img_login_principal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tvTituloIniciarSesion"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="@string/iniciar_sesion"
+        android:textColor="@color/color_texto_blanco"
+        android:textSize="32sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/imgIlustracionLogin" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnContinuarFacebook"
+        android:gravity="start|center_vertical"
+        android:paddingStart="100dp"
+        android:layout_width="322dp"
+        android:layout_height="55dp"
+        android:layout_marginTop="40dp"
+        android:background="@drawable/btn_selector_boton_oscuro"
+        android:text="@string/continuar_facebook"
+        android:textAllCaps="false"
+        android:textColor="@color/color_texto_blanco"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        app:backgroundTint="@null"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvTituloIniciarSesion" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnContinuarGoogle"
+        android:gravity="start|center_vertical"
+        android:paddingStart="100dp"
+        android:layout_width="322dp"
+        android:layout_height="55dp"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/btn_selector_boton_oscuro"
+        android:text="@string/continuar_google"
+        android:textAllCaps="false"
+        android:textColor="@color/color_texto_blanco"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        app:backgroundTint="@null"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/btnContinuarFacebook" />
+
+    <View
+        android:id="@+id/puntoSeparador"
+        android:layout_width="10dp"
+        android:layout_height="13dp"
+        android:layout_marginTop="40dp"
+        android:background="@drawable/frm_circulo_separador"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/btnContinuarGoogle" />
+
+    <View
+        android:id="@+id/divisorIzquierdo"
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginEnd="12dp"
+        android:background="@drawable/divisor_horizontal"
+        app:layout_constraintBottom_toBottomOf="@id/puntoSeparador"
+        app:layout_constraintEnd_toStartOf="@id/puntoSeparador"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/puntoSeparador" />
+
+    <View
+        android:id="@+id/divisorDerecho"
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+        android:layout_marginStart="12dp"
+        android:layout_marginEnd="24dp"
+        android:background="@drawable/divisor_horizontal"
+        app:layout_constraintBottom_toBottomOf="@id/puntoSeparador"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/puntoSeparador"
+        app:layout_constraintTop_toTopOf="@id/puntoSeparador" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnRegistrarse"
+        android:layout_width="213dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="32dp"
+        android:background="@drawable/btn_selector_boton_verde"
+        android:text="@string/registrate"
+        android:textAllCaps="false"
+        android:textColor="@color/color_texto_blanco"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/puntoSeparador" />
+
+    <ImageButton
+        android:id="@+id/btnRegresar"
+        android:layout_width="89dp"
+        android:layout_height="119dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="84dp"
+        android:background="@android:color/transparent"
+        android:contentDescription="@string/regresar"
+        android:elevation="60dp"
+        android:scaleType="fitCenter"
+        android:src="@drawable/icono_atras"
+        android:translationZ="60dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/iconoFacebookFlotante"
+        android:layout_width="133dp"
+        android:layout_height="88dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="474dp"
+        android:elevation="60dp"
+        android:scaleType="fitCenter"
+        android:src="@drawable/logo_facebook"
+        android:translationZ="60dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/iconoGoogleFlotante"
+        android:layout_width="132dp"
+        android:layout_height="84dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="546dp"
+        android:elevation="60dp"
+        android:scaleType="fitCenter"
+        android:src="@drawable/logo_google"
+        android:translationZ="60dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

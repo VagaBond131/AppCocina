@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="regresar">Atrás</string>
+    <string name="iniciar_sesion">Iniciar Sesión</string>
+    <string name="ilustracion_login">Ilustración de inicio de sesión</string>
+    <string name="continuar_facebook">Continuar con Facebook</string>
+    <string name="continuar_google">Continuar con Google</string>
+    <string name="registrate">Regístrate</string>
+
+</resources>

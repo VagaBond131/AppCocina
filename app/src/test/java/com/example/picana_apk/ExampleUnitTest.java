@@ -1,4 +1,4 @@
-package com.example.appcomida;
+package com.example.picana_apk;
 
 import org.junit.Test;
 
