@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "777646157071",
+    "project_id": "restaurante-f1560",
+    "storage_bucket": "restaurante-f1560.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:777646157071:android:71559121b7e95f25a4627a",
+        "android_client_info": {
+          "package_name": "com.example.picana_apk"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "777646157071-emu2s7lemdnkikran4ftg80aab4i3589.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.picana_apk",
+            "certificate_hash": "69ab4cd662d4f116fa66241b7f52088759270f31"
+          }
+        },
+        {
+          "client_id": "777646157071-k70amoj1duaeg4ffgmbrsr1ou0gjpu1i.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCbi9g58yQ3Hiw2DR9Qdfk_5LlXR-K937A"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "777646157071-k70amoj1duaeg4ffgmbrsr1ou0gjpu1i.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
