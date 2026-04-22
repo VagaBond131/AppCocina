@@ -6,7 +6,7 @@
     <color name="color_superficie_variante">#2A2A2A</color>
 
     <color name="color_primario">#22C55E</color>
-    <color name="color_primario_oscuro">#16A34A</color>
+    <color name="color_primario_oscuro">#000000</color>
     <color name="color_primario_claro">#4ADE80</color>
 
     <color name="color_texto_blanco">#FFFFFF</color>
@@ -17,5 +17,7 @@
     <color name="color_borde">#2E2E2E</color>
 
     <color name="color_facebook">#1877F2</color>
+
+    <color name="color_dorado_pincana">#FFD700</color>
 
 </resources>

@@ -20,6 +20,7 @@ import com.facebook.AccessToken;
 import com.facebook.CallbackManager;
 import com.facebook.FacebookCallback;
 import com.facebook.FacebookException;
+import com.facebook.login.LoginBehavior;
 import com.facebook.login.LoginManager;
 import com.facebook.login.LoginResult;
 import com.google.android.gms.auth.api.signin.GoogleSignIn;
@@ -47,7 +48,7 @@ public class InicioSesionFragment extends Fragment {
                             authViewModel.autenticarConGoogle(account.getIdToken());
                         }
                     } catch (ApiException e) {
-                        Toast.makeText(getContext(), "Error de conexión con Google", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(getContext(), "Error Google", Toast.LENGTH_SHORT).show();
                     }
                 }
             }
@@ -68,7 +69,7 @@ public class InicioSesionFragment extends Fragment {
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
 
-        authViewModel = new ViewModelProvider(this).get(AuthViewModel.class);
+        authViewModel = new ViewModelProvider(requireActivity()).get(AuthViewModel.class);
 
         GoogleSignInOptions gso = new GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN)
                 .requestIdToken(getString(R.string.default_web_client_id))
@@ -83,7 +84,15 @@ public class InicioSesionFragment extends Fragment {
         });
 
         authViewModel.getErrorLiveData().observe(getViewLifecycleOwner(), mensajeError -> {
-            Toast.makeText(getContext(), mensajeError, Toast.LENGTH_SHORT).show();
+            if (mensajeError != null) {
+                Toast.makeText(getContext(), mensajeError, Toast.LENGTH_SHORT).show();
+            }
+        });
+
+        view.findViewById(R.id.btnRegresar).setOnClickListener(v -> {
+            if (getActivity() != null) {
+                getActivity().finish();
+            }
         });
 
         view.findViewById(R.id.btnContinuarGoogle).setOnClickListener(v -> {
@@ -92,10 +101,10 @@ public class InicioSesionFragment extends Fragment {
         });
 
         view.findViewById(R.id.btnContinuarFacebook).setOnClickListener(v -> {
+            LoginManager.getInstance().setLoginBehavior(LoginBehavior.NATIVE_WITH_FALLBACK);
             LoginManager.getInstance().logInWithReadPermissions(
                     this,
-                    mCallbackManager,
-                    Arrays.asList("email", "public_profile")
+                    Arrays.asList("public_profile", "email")
             );
         });
 
@@ -107,12 +116,12 @@ public class InicioSesionFragment extends Fragment {
 
             @Override
             public void onCancel() {
-                Toast.makeText(getContext(), "Login cancelado", Toast.LENGTH_SHORT).show();
+                Toast.makeText(getContext(), "Cancelado", Toast.LENGTH_SHORT).show();
             }
 
             @Override
             public void onError(@NonNull FacebookException error) {
-                Toast.makeText(getContext(), "Error: " + error.getMessage(), Toast.LENGTH_SHORT).show();
+                Toast.makeText(getContext(), "Error FB: " + error.getMessage(), Toast.LENGTH_SHORT).show();
             }
         });
 
@@ -128,13 +137,14 @@ public class InicioSesionFragment extends Fragment {
 
     private void irAMainActivity() {
         Intent intent = new Intent(getActivity(), MainActivity.class);
+        intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
         startActivity(intent);
         if (getActivity() != null) getActivity().finish();
     }
 
     @Override
     public void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
-        super.onActivityResult(requestCode, resultCode, data);
         mCallbackManager.onActivityResult(requestCode, resultCode, data);
+        super.onActivityResult(requestCode, resultCode, data);
     }
 }

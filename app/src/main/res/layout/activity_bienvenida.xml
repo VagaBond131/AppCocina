@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_fondo">
+
+    <ImageView
+        android:id="@+id/imgFondoPlato"
+        android:layout_width="676dp"
+        android:layout_height="1070dp"
+        android:contentDescription="@null"
+        android:scaleType="centerCrop"
+        android:src="@drawable/img_fondo_bienvenida"
+        app:layout_constraintBottom_toTopOf="@+id/guidelineSeccionInferior"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.501"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.223" />
+
+    <TextView
+        android:id="@+id/tvSaludoUsuario"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginEnd="32dp"
+        android:layout_marginTop="112dp"
+        android:lineSpacingExtra="-8dp"
+        android:text="BUEN DÍA,\n..."
+        tools:text="BUEN DÍA,\nUSUARIO."
+        android:textColor="@color/color_texto_blanco"
+        android:textSize="42sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tvPreguntaOrden"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="¿Listo para ordenar?"
+        android:textColor="@color/color_texto_blanco"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@id/tvSaludoUsuario"
+        app:layout_constraintTop_toBottomOf="@id/tvSaludoUsuario" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guidelineSeccionInferior"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.75" />
+
+    <View
+        android:id="@+id/fondoInferior"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="#121212"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/guidelineSeccionInferior"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <LinearLayout
+        android:id="@+id/containerOfertas"
+        android:layout_width="192dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="32dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toTopOf="@+id/btnOrdenarPrincipal"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/fondoInferior">
+
+        <ImageView
+            android:layout_width="37dp"
+            android:layout_height="50dp"
+            android:src="@drawable/icn_regalo"
+            app:tint="@color/color_texto_blanco" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:text="Ofertas Semanales"
+            android:textColor="@color/color_texto_blanco"
+            android:textSize="16sp" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tvBadgeBienvenido"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="32dp"
+        android:background="@drawable/btn_selector_boton_verde"
+        android:backgroundTint="#F5D0B4"
+        android:paddingHorizontal="16dp"
+        android:paddingVertical="4dp"
+        android:text="✔ Bienvenido"
+        android:textColor="#3E2723"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@id/containerOfertas"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/containerOfertas" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnOrdenarPrincipal"
+        android:layout_width="248dp"
+        android:layout_height="55dp"
+        android:layout_marginEnd="24dp"
+        android:layout_marginBottom="44dp"
+        android:background="@drawable/btn_selector_boton_oscuro"
+        app:backgroundTint="@null"
+        android:text="Ordenar"
+        android:textAllCaps="false"
+        android:textColor="@color/color_texto_blanco"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        app:cornerRadius="30dp"
+        app:icon="@drawable/icn_adelante"
+        app:iconGravity="end"
+        app:iconPadding="16dp"
+        app:iconSize="30dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:strokeWidth="0dp" />
+</androidx.constraintlayout.widget.ConstraintLayout>

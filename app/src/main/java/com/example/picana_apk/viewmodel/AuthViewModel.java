@@ -15,6 +15,13 @@ public class AuthViewModel extends ViewModel {
     private MutableLiveData<FirebaseUser> userMutableLiveData = new MutableLiveData<>();
     private MutableLiveData<String> errorMutableLiveData = new MutableLiveData<>();
 
+    public AuthViewModel() {
+        FirebaseUser currentUser = mAuth.getCurrentUser();
+        if (currentUser != null) {
+            userMutableLiveData.postValue(currentUser);
+        }
+    }
+
     public LiveData<FirebaseUser> getUserLiveData() {
         return userMutableLiveData;
     }
@@ -30,7 +37,7 @@ public class AuthViewModel extends ViewModel {
                     if (task.isSuccessful()) {
                         userMutableLiveData.postValue(mAuth.getCurrentUser());
                     } else {
-                        errorMutableLiveData.postValue("Fallo en la autenticación con Firebase");
+                        errorMutableLiveData.postValue("Fallo en la autenticación con Google");
                     }
                 });
     }

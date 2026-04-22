@@ -3,26 +3,27 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/nav_graph"
-    app:startDestination="@id/FirstFragment">
+    app:startDestination="@id/cartaFragment">
 
     <fragment
-        android:id="@+id/FirstFragment"
-        android:name="com.example.picana_apk.FirstFragment"
-        android:label="@string/first_fragment_label"
-        tools:layout="@layout/fragment_first">
-
+        android:id="@+id/cartaFragment"
+        android:name="com.example.picana_apk.view.menu.CartaFragment"
+        android:label="Categorías"
+        tools:layout="@layout/fragment_categorias">
         <action
-            android:id="@+id/action_FirstFragment_to_SecondFragment"
-            app:destination="@id/SecondFragment" />
+            android:id="@+id/action_carta_to_menuMatch"
+            app:destination="@id/menuMatchFragment" />
     </fragment>
+
     <fragment
-        android:id="@+id/SecondFragment"
-        android:name="com.example.picana_apk.SecondFragment"
-        android:label="@string/second_fragment_label"
-        tools:layout="@layout/fragment_second">
-
-        <action
-            android:id="@+id/action_SecondFragment_to_FirstFragment"
-            app:destination="@id/FirstFragment" />
+        android:id="@+id/menuMatchFragment"
+        android:name="com.example.picana_apk.view.menu.MenuMatchFragment"
+        android:label="Menú Match"
+        tools:layout="@layout/fragment_menu_match">
+        <argument
+            android:name="categoriaNombre"
+            app:argType="string"
+            android:defaultValue="Todos" />
     </fragment>
+
 </navigation>

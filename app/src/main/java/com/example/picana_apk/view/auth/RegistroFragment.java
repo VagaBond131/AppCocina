@@ -32,5 +32,11 @@ public class RegistroFragment extends Fragment {
                 activity.reemplazarFragmento(new InicioSesionFragment());
             }
         });
+
+        view.findViewById(R.id.btnRegresar).setOnClickListener(v -> {
+            if (getActivity() != null) {
+                getActivity().getOnBackPressedDispatcher().onBackPressed();
+            }
+        });
     }
 }
