@@ -13,3 +13,14 @@
 .externalNativeBuild
 .cxx
 local.properties
+# Local configuration files
+.idea/misc.xml
+gradle.properties
+gradle/libs.versions.toml
+
+# General IDE and Gradle files
+*.iml
+.gradle
+local.properties
+/.idea/
+/build/
