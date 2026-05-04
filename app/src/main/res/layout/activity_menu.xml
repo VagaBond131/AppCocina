@@ -30,17 +30,6 @@
         app:layout_constraintStart_toEndOf="@id/btnBack"
         app:layout_constraintTop_toTopOf="@id/btnBack" />
 
-    <ImageView
-        android:id="@+id/btnCarritoMenu"
-        android:layout_width="34dp"
-        android:layout_height="43dp"
-        android:layout_marginEnd="20dp"
-        android:src="@drawable/icn_carrito"
-        app:layout_constraintBottom_toBottomOf="@id/tvMenuTitle"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="@id/tvMenuTitle"
-        app:tint="#E0C097" />
-
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/containerBuscar"
         android:layout_width="0dp"
@@ -79,10 +68,12 @@
 
     <com.google.android.material.tabs.TabLayout
         android:id="@+id/tabLayoutCategorias"
-        android:layout_width="445dp"
+        android:layout_width="0dp"
         android:layout_height="57dp"
         android:layout_marginTop="8dp"
         android:background="@drawable/cuadro_menu_cat"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/containerBuscar"
         app:tabIndicatorColor="#E0C097"
         app:tabMode="scrollable"
@@ -91,10 +82,12 @@
 
     <FrameLayout
         android:id="@+id/contenedor_menu"
-        android:layout_width="match_parent"
+        android:layout_width="0dp"
         android:layout_height="0dp"
         android:background="@drawable/cuadro_menu"
         app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/tabLayoutCategorias" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

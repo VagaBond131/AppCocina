@@ -1,4 +1,4 @@
-package com.example.picana_apk.view.menu;
+package com.example.picana_apk.presentation.view.menu;
 
 import android.content.Intent;
 import android.os.Bundle;

@@ -1,4 +1,4 @@
-package com.example.picana_apk.view;
+package com.example.picana_apk.presentation.view;
 
 import android.os.Bundle;
 import android.widget.ImageView;
@@ -6,8 +6,8 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.content.ContextCompat;
 import androidx.fragment.app.Fragment;
 import com.example.picana_apk.R;
-import com.example.picana_apk.view.menu.CartaFragment;
-import com.example.picana_apk.view.menu.MenuMatchFragment;
+import com.example.picana_apk.presentation.view.menu.CartaFragment;
+import com.example.picana_apk.presentation.view.menu.MenuMatchFragment;
 
 public class Principal extends AppCompatActivity {
 
