@@ -1,4 +1,4 @@
-package com.example.picana_apk.view;
+package com.example.picana_apk.presentation.view;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -8,8 +8,8 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.splashscreen.SplashScreen;
 import androidx.lifecycle.ViewModelProvider;
 import com.example.picana_apk.R;
-import com.example.picana_apk.view.auth.Sesion;
-import com.example.picana_apk.viewmodel.AuthViewModel;
+import com.example.picana_apk.presentation.view.auth.Sesion;
+import com.example.picana_apk.presentation.viewmodel.AuthViewModel;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 

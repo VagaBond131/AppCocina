@@ -1,4 +1,4 @@
-package com.example.picana_apk.viewmodel;
+package com.example.picana_apk.presentation.viewmodel;
 
 import androidx.lifecycle.LiveData;
 import androidx.lifecycle.MutableLiveData;

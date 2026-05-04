@@ -1,4 +1,4 @@
-package com.example.picana_apk.view.auth;
+package com.example.picana_apk.presentation.view.auth;
 
 import android.os.Bundle;
 import androidx.appcompat.app.AppCompatActivity;

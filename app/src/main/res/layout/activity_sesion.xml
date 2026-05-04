@@ -7,7 +7,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/color_fondo"
-    tools:context=".view.auth.Sesion">
+    tools:context=".presentation.view.auth.Sesion">
 
     <androidx.fragment.app.FragmentContainerView
         android:id="@+id/contenedor_fragmentos"

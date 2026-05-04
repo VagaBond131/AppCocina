@@ -1,4 +1,4 @@
-package com.example.picana_apk.view.auth;
+package com.example.picana_apk.presentation.view.auth;
 
 import android.app.Activity;
 import android.content.Intent;
@@ -14,8 +14,8 @@ import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 import androidx.lifecycle.ViewModelProvider;
 import com.example.picana_apk.R;
-import com.example.picana_apk.view.MainActivity;
-import com.example.picana_apk.viewmodel.AuthViewModel;
+import com.example.picana_apk.presentation.view.MainActivity;
+import com.example.picana_apk.presentation.viewmodel.AuthViewModel;
 import com.facebook.AccessToken;
 import com.facebook.CallbackManager;
 import com.facebook.FacebookCallback;
@@ -142,9 +142,12 @@ public class InicioSesionFragment extends Fragment {
         if (getActivity() != null) getActivity().finish();
     }
 
+
+
     @Override
     public void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
         mCallbackManager.onActivityResult(requestCode, resultCode, data);
         super.onActivityResult(requestCode, resultCode, data);
     }
 }
+

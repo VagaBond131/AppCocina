@@ -30,7 +30,7 @@
         <meta-data android:name="com.facebook.sdk.ClientToken" android:value="@string/facebook_client_token"/>
 
         <activity
-            android:name=".view.MainActivity"
+            android:name=".presentation.view.MainActivity"
             android:exported="true"
             android:theme="@style/Theme.App.Starting">
             <intent-filter>
@@ -39,11 +39,11 @@
             </intent-filter>
         </activity>
 
-        <activity android:name=".view.Principal" />
+        <activity android:name=".presentation.view.Principal" />
 
-        <activity android:name=".view.auth.Sesion" />
+        <activity android:name=".presentation.view.auth.Sesion" />
 
-        <activity android:name=".view.menu.MenuActivity" />
+        <activity android:name=".presentation.view.menu.MenuActivity" />
 
         <activity android:name="com.facebook.FacebookActivity"
             android:configChanges="keyboard|keyboardHidden|screenLayout|screenSize|orientation"

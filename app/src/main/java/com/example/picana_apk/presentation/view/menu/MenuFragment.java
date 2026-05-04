@@ -1,4 +1,4 @@
-package com.example.picana_apk.view.menu;
+package com.example.picana_apk.presentation.view.menu;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -11,12 +11,13 @@ import androidx.lifecycle.ViewModelProvider;
 import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 import com.example.picana_apk.R;
-import com.example.picana_apk.adapter.PlatoAdapter;
-import com.example.picana_apk.viewmodel.MenuViewModel;
+import com.example.picana_apk.presentation.adapter.PlatoAdapter;
+import com.example.picana_apk.presentation.viewmodel.MenuViewModel;
 
 public class MenuFragment extends Fragment {
 
     private RecyclerView rvPlatos;
+    private PlatoAdapter adapter;
     private MenuViewModel viewModel;
 
     @Override
@@ -29,14 +30,21 @@ public class MenuFragment extends Fragment {
         super.onViewCreated(view, savedInstanceState);
 
         rvPlatos = view.findViewById(R.id.rvPlatos);
-        rvPlatos.setLayoutManager(new GridLayoutManager(getContext(), 2));
+        rvPlatos.setLayoutManager(new GridLayoutManager(requireContext(), 2));
+        
+        rvPlatos.setHasFixedSize(true);
+        rvPlatos.setItemViewCacheSize(20);
+        
+        adapter = new PlatoAdapter();
+        rvPlatos.setAdapter(adapter);
 
+        // CORRECCIÓN: Usar 'requireActivity()' para compartir el ViewModel con MenuActivity.
+        // Esto permite que el fragmento reaccione cuando se cambian las pestañas en la actividad.
         viewModel = new ViewModelProvider(requireActivity()).get(MenuViewModel.class);
 
         viewModel.getPlatos().observe(getViewLifecycleOwner(), platos -> {
             if (platos != null) {
-                PlatoAdapter adapter = new PlatoAdapter(platos);
-                rvPlatos.setAdapter(adapter);
+                adapter.updateData(platos);
             }
         });
     }
